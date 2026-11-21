@@ -969,7 +969,7 @@ body header.border-b {
   }
 }
 
-.mx-auto.max-w-6xl {
+.mx-auto.max-w-6xl:has(> header) {
   padding-top: 72px;
 }
 
@@ -978,7 +978,7 @@ body header.border-b {
 }
 
 @media (max-width: 639px) {
-  .mx-auto.max-w-6xl {
+  .mx-auto.max-w-6xl:has(> header) {
     padding-top: 64px;
   }
 }
