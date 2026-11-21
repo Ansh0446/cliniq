@@ -221,5 +221,3 @@ Entry points: the floating button, plus "Ask the assistant" links on My cases, D
 - **Not yet browser-tested:** voice dictation, geolocation, Google sign-in, the Gemini call, and the live Overpass call were not run in the build environment.
 - **Sent cases contain PHI.** Review your hosting region, backup, and retention setup against the regulations that apply to you (HIPAA, GDPR, India's DPDP Act).
 - **Types.** `src/lib/database.types.ts` was generated from the live schema; regenerate it after any schema change.
-#   c l i n i q  
- 
