@@ -1,0 +1,53 @@
+@import '@fontsource-variable/public-sans';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Public Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Surfaces and text */
+  --color-canvas: #f3f6f6;
+  --color-panel: #ffffff;
+  --color-line: #d5dfe1;
+  /* Borders that identify a form control must reach 3:1 against the page (WCAG 1.4.11). */
+  --color-control: #6b7f87;
+  --color-ink: #11232b;
+  --color-muted: #4d626b;
+
+  /* Deep teal brand scale */
+  --color-teal-50: #e7f3f2;
+  --color-teal-100: #c9e4e1;
+  --color-teal-500: #147a78;
+  --color-teal-600: #0d6866;
+  --color-teal-700: #0a5351;
+  --color-teal-900: #06302f;
+
+  /* Triage, each paired with a tinted background for contrast */
+  --color-urgent: #a8200f;
+  --color-urgent-bg: #fdebe8;
+  --color-soon: #8a5200;
+  --color-soon-bg: #fff2d9;
+  --color-routine: #1b6549;
+  --color-routine-bg: #e3f3ea;
+
+  --radius-control: 0.5rem;
+  --radius-surface: 0.75rem;
+}
+
+@layer base {
+  html { color-scheme: light; }
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'tnum' 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-teal-500);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
